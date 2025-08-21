@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Game Style - Elviana XII-G</title>
+
+  <!-- Font Inter: Estetik, modern, dan cocok untuk UI game -->
+  <style>
+    /* === GLOBAL STYLE === */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(270deg, #ffe6f7, #ccf2ff, #fff0e6, #e6f7ff);
+      background-size: 800% 800%;
+      animation: gradientShift 18s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 32px;
+      color: #333;
+      background: linear-gradient(to right, #0077ff, #00e0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInDown 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* === FORM STYLE === */
+    form#registerform {
+      background-color: #ffffffcc;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 420px;
+      width: 90%;
+      animation: zoomIn 1.2s ease;
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    form#registerform input {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+      border: 2px solid #cce5ff;
+      border-radius: 14px;
+      font-size: 15px;
+      background-color: #f5fbff;
+      transition: all 0.3s ease;
+    }
+
+    form#registerform input:focus {
+      border-color: #66cfff;
+      background-color: #ebfaff;
+      outline: none;
+      box-shadow: 0 0 8px #a6e0ff;
+    }
+
+    form#registerform button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      background: linear-gradient(to right, #00b8ff, #a855f7);
+      color: white;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    form#registerform button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(0, 140, 255, 0.4);
+    }
+
+    /* === TABLE STYLE === */
+    table#datatable {
+      margin-top: 40px;
+      width: 90%;
+      max-width: 800px;
+      border-collapse: collapse;
+      background-color: #ffffffd8;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1.4s ease;
+    }
+
+    table#datatable th,
+    table#datatable td {
+      padding: 14px;
+      text-align: center;
+      border: 1px solid #e3f2fd;
+      font-size: 15px;
+    }
+
+    table#datatable thead {
+      background: linear-gradient(to right, #a8dadc, #d0f4ff);
+      color: #003366;
+      font-weight: 600;
+    }
+
+    table#datatable tbody tr:nth-child(even) {
+      background-color: #f8fcff;
+    }
+
+    table#datatable tbody tr:hover {
+      background-color: #e2f2ff;
+      transition: 0.3s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Formulir Pendaftaran</h1>
+
+  <form id="registerform">
+    <input required type="text" name="nama" id="nama" placeholder="Nama lengkap" />
+    <input required type="email" name="email" id="email" placeholder="Email" />
+    <input required type="password" name="password" id="password" placeholder="Password" />
+    <input required type="number" name="nomorhp" id="nomorhp" placeholder="Nomor HP" />
+    <input required type="date" name="tanggal" id="tanggal" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <table id="datatable">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Email</th>
+        <th>Tanggal</th>
+        <th>Nomor HP</th>
+        <th>password</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script src="js/script.js">
+   
+  </script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"972812dc0ea74062","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"642255d447fd46dbbcd67f3ff9dbdf59"}' crossorigin="anonymous"></script>
+</body>
+</html>
